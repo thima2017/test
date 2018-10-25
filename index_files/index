@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>${title}</title>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=0">
+    <link type="image/png" href="//www.wix.com/favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="//static.parastorage.com/services/chat-widget/1.451.0/app.min.css">
+    <link rel="stylesheet" href="//static.parastorage.com/services/third-party/fonts/Helvetica/fontFace.css">
+    
+    <script>
+      window._trackJs = {
+        token: "503060699e474927a75bc6f70393b1bb",
+        application: "chat-widget",
+        enabled: (Math.random() <= 0.01)
+      };
+      if(window._trackJs.enabled) {
+        firebase.database.enableLogging(function (message) {
+          console.log('[FIREBASE]', message);
+        });
+      }
+    </script>
+    <script src="https://cdn.trackjs.com/releases/current/tracker.js"></script>
+    <script type="text/javascript" src="//static.parastorage.com/services/js-sdk/1.102.0/js/wix-private.min.js" crossorigin></script>
+    <script type="text/javascript">
+        window.startLoadTime = Date.now();
+    </script>
+    <script type="text/javascript">
+      (function () {
+        var isMobile = window.Wix.Utils.getDeviceType() === 'mobile';
+        var mobileAppName = 'chat-widget-mobile-web';
+        var desktopAppName = 'chat-widget-desktop';
+        var appName = (isMobile && mobileAppName) || desktopAppName;
+        window.fedops = window.fedops || {};
+        window.fedops.apps = window.fedops.apps || {};
+        window.fedops.apps[appName] = {startLoadTime: window.performance && window.performance.now && window.performance.now() };
+        try { window.fedops.sessionId = window.localStorage.getItem('fedops.logger.sessionId'); } catch(e) {};
+        window.fedops.sessionId = window.fedops.sessionId || 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) { var r = Math.random()*16|0, v = c == 'x' ? r : (r&0x3|0x8); return v.toString(16); });
+        (new Image()).src = '//frog.wix.com/fed?appName=' + appName + '&src=72&evid=14&session_id=' + window.fedops.sessionId;
+        })();
+    </script>
+  </head>
+  <body style="margin: 0;">
+    <div id="root"></div>
+    <script>
+      window.__LOCALE__ = 'en';
+      window.__STATICS_BASE_URL__ = '//static.parastorage.com/services/chat-widget/1.451.0/';
+      window.__EXPERIMENTS__ = {"specs.woa.ChatSendProductHighlight":"true","specs.chat.LazyLoadEmojiPanel":"true","specs.crm.ChatAvailabilitySpec":"true","specs.crm.ShowChatBrandingInEditorSpec":"true","specs.chat.WidgetPreviewImage":"true","specs.chat.NotifyRecentMessagesAsNew":"true","specs.chat.DontSendMessageWhenUnAvailable":"true","specs.chat.UxEnhacements":"true","specs.com.EngageName":"Inbox","specs.commons.AutoMessagesServerListenerAndInitTriggerSpec":"true","specs.commons.LeanTenantFromRelooseSpec":"true","specs.com.KeepEditorVisibilityAfterDelete":"true","specs.chat.FirebaseGcAsync":"true","specs.com.HeaderTextColor":"true","specs.com.SDKPageTitleOnly":"true","specs.crm.ShowChatBrandingSpec":"true","specs.com.PreviewLiveChat":"true","specs.automessages.SendMessageForWixAutomationSpec":"true","specs.chat.DemoMessagesInSettings":"true","specs.chat.SetFirebaseAuthAToSession":"true","specs.woa.ChatlistInfiniteScrollInCrazyChatClient":"true","specs.chat.CustomTextInputPlaceholder":"true","specs.com.AdvancedTab":"false","specs.com.ChatBackgroundPatterns":"true","specs.chat.InitChatInRender":"true","specs.com.SoundsToggleButton":"false","specs.crm.WixChatUsingMM3Spec":"true","specs.com.ShowDemoLcfInEditor":"true","specs.com.ChatPremium":"true","specs.automessages.AutoMessagesTranslationSpec":"true","specs.chat.AdiUpgradeButton":"true","specs.woa.InboxPerformanceFix":"true","specs.com.ChatSettingsDrillDownMenu":"true","specs.chat.ChatWidgetLazyLoad":"true","specs.com.AddAvatarOptions":"true","specs.com.RestoreLastMessageOfUndefinedBug":"false","specs.chat.GlobalUnreadRoomsCounter":"true","specs.com.ShowCTAButtonForOldDataFormat":"true","specs.chat.ChatFontPicker":"true","specs.chat.EnableFacebookWebhookHandleSpec":"true","specs.com.ChatContributorSenderAvatars":"true","specs.chat.DemoInPreviewForUnsaved":"true","specs.com.AllowUploadingFiles":"true","specs.engage.bot.PostImMessagingActivitiesFromBotSpec":"true","specs.com.AllowNoAvatarOption":"true","specs.woa.ChatRequestsRetry":"true","specs.UseAvailabilityHoursForLCFSpec":"true","specs.chat.NoSvSessionToken":"true","specs.chat.SocialChat":"true","specs.chat.ChatWidgetLazyLoadV2":"false","specs.chat.WidgetClearFirebaseLocalStorage":"false","specs.chat.UseDefaultLcfSettingsSpec":"true","specs.chat.SendEmailOnSocialChatMessageSpec":"true"};
+      window.__SETTINGS__ = {"publicVisibility":false,"editorVisibility":false,"chatOnboarded":null,"businessChatEnabled":true,"socialChatEnabled":false};
+      window.__CHAT_INIT_URL__ = '/_api/crm-inbox-server/chat/init';
+      window.__CHAT_INIT_RESULT__ = {"options":{"databaseURL":"https://wix-engage-visitors-prod-14.firebaseio.com/","apiKey":"AIzaSyBuSquDXEo12cnd49RVhx5Zj6Mx6rIvZE8","authDomain":"wix-engage-visitors-prod-14.firebaseapp.com"},"authKey":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJodHRwczovL2lkZW50aXR5dG9vbGtpdC5nb29nbGVhcGlzLmNvbS9nb29nbGUuaWRlbnRpdHkuaWRlbnRpdHl0b29sa2l0LnYxLklkZW50aXR5VG9vbGtpdCIsImNsYWltcyI6eyJ2aXNpdG9ySWQiOiIwYTY3M2YyZS1iYThhLTQyZGQtOGE5MS1mNzc4NjUxMzRlYmEiLCJ2aXNpdG9ySW5zdGFuY2VJZCI6IjBhNjczZjJlLWJhOGEtNDJkZC04YTkxLWY3Nzg2NTEzNGViYXwyYWUxZDViYi1kOTUyLTRiMWEtOWQ0Mi03MzM1MTM2YjlhNGUifSwiZXhwIjoxNTQwNTAyMzk2LCJpYXQiOjE1NDA0OTg3OTYsImlzcyI6ImFjY291bnQtZm9yLWNoYXQtc2hhcmQtMTRAd2l4LWVuZ2FnZS12aXNpdG9ycy1wcm9kLTE0LmlhbS5nc2VydmljZWFjY291bnQuY29tIiwic3ViIjoiYWNjb3VudC1mb3ItY2hhdC1zaGFyZC0xNEB3aXgtZW5nYWdlLXZpc2l0b3JzLXByb2QtMTQuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJ1aWQiOiIyYWUxZDViYi1kOTUyLTRiMWEtOWQ0Mi03MzM1MTM2YjlhNGUifQ.JVxtuIV7QeXLSw8daCPABXa8dNg9teDqvm6SSTgb4RfjCNoMUb1RcIGu5JWIQ4i2-ywAvRTaek3miTsSEJBAfgQ8RKqY1ojH4e19VbsZDohwkWykgF1q0wbjwePG1mp5rurZMlae_8hlDbFRrLk8BIkvgBZ5onLEN7BW3mlnmm4TAGFPid8cbTqc2OmHdL9EwEx_6gVzlp5zR2U5DEgmCvJuGhKB68xe0yCd5hq5jU4EQp3iq6eE4oDlmg3rJVKISRRiE9JyDovZqcsr1dIP2rJKHsQnk_wHWEZmx7pFpJT37hQrQoqS1B0cTpsIDx-u3ToD6mOsmDy6lrOxAQEqGQ","messagePath":"sites/3bd892db-db04-4856-94fc-1e6cb658a96e/messages/0a673f2e-ba8a-42dd-8a91-f77865134eba","presencePath":"sites/3bd892db-db04-4856-94fc-1e6cb658a96e/visitor-presence/0a673f2e-ba8a-42dd-8a91-f77865134eba|2ae1d5bb-d952-4b1a-9d42-7335136b9a4e","location":"St Petersburg, Russia","timestamp":"2018-10-25T20:19:56.374Z","visitorId":"0a673f2e-ba8a-42dd-8a91-f77865134eba","visitorInstanceId":"0a673f2e-ba8a-42dd-8a91-f77865134eba|2ae1d5bb-d952-4b1a-9d42-7335136b9a4e","shardId":"wix-engage-visitors-prod-14","isBranded":false,"messageTriggers":[{"url":"/_api/auto-messages-server/v1/auto-messages/trigger?token=JWS.eyJraWQiOiJsZlRKZFBWUyIsImFsZyI6IkhTMjU2In0.eyJkYXRhIjoie1widmlzaXRvcnNJbnN0YW5jZUlkXCI6XCI2M2U3MTdiMS0xNGJlLTQ1MGUtYWM0NS1iZWE2YjU5YjdlZjFcIixcImNoYXRyb29tSWRcIjpcIjQ1ZDZkMjk2LTVlYzktMzZjMy05MTczLTJlOTQ0ODE3ZTJiZVwiLFwiY29udGFjdElkXCI6XCIwYTY3M2YyZS1iYThhLTQyZGQtOGE5MS1mNzc4NjUxMzRlYmFcIixcIm1lc3NhZ2VUeXBlXCI6XCJHUkVFVElOR1wifSIsImlhdCI6MTU0MDQ5ODc5Nn0._dxO343l64j2L83t_syk_4ICgwMHOHRObPxprBiirUo","delay":8000}],"availability":{"onlinePeriods":[{"start":0,"end":9223372036854775807}]},"correlationId":"abf503fb-5160-432e-9454-bc46ef428b40","coreChat":{"chatroomId":"45d6d296-5ec9-36c3-9173-2e944817e2be","coreChatToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiIwYTY3M2YyZS1iYThhLTQyZGQtOGE5MS1mNzc4NjUxMzRlYmEiLCJwYXJ0aWNpcGFudElkcyI6WyIwYTY3M2YyZS1iYThhLTQyZGQtOGE5MS1mNzc4NjUxMzRlYmEiXSwidXNlclR5cGUiOiJjb250YWN0IiwiaGlzdG9yeURpc2FsbG93ZWQiOmZhbHNlLCJoaXN0b3J5U2luY2VUaW1lc3RhbXAiOjE1NDA0OTg3ODEzNjAsImNoYXRyb29tRmlsdGVyIjpudWxsLCJpc3MiOiJjaGF0LXNlcnZlciIsImV4cCI6MTU0MDU4NTE5NiwiaWF0IjoxNTQwNDk4Nzk2fQ.EyqK5raWcusXCDh0ob3zDnhIFUGG1XIsJKu-8u8yhtE","realTimeToken":null,"visitorDisplayData":null},"derivedChatroomId":"45d6d296-5ec9-36c3-9173-2e944817e2be","coreChatToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiIwYTY3M2YyZS1iYThhLTQyZGQtOGE5MS1mNzc4NjUxMzRlYmEiLCJwYXJ0aWNpcGFudElkcyI6WyIwYTY3M2YyZS1iYThhLTQyZGQtOGE5MS1mNzc4NjUxMzRlYmEiXSwidXNlclR5cGUiOiJjb250YWN0IiwiaGlzdG9yeURpc2FsbG93ZWQiOmZhbHNlLCJoaXN0b3J5U2luY2VUaW1lc3RhbXAiOjE1NDA0OTg3ODEzNjAsImNoYXRyb29tRmlsdGVyIjpudWxsLCJpc3MiOiJjaGF0LXNlcnZlciIsImV4cCI6MTU0MDU4NTE5NiwiaWF0IjoxNTQwNDk4Nzk2fQ.EyqK5raWcusXCDh0ob3zDnhIFUGG1XIsJKu-8u8yhtE","chatroomId":"45d6d296-5ec9-36c3-9173-2e944817e2be"};
+      window.__ALLOW_INPUT__ = true;
+    </script>
+    <script src="//static.parastorage.com/polyfill/v2/polyfill.min.js?rum=0&features=default,es6,es2016,es2017,fetch&flags=gated&unknown=polyfill" crossorigin></script>
+    <script src="//static.parastorage.com/unpkg/react@15.5.4/dist/react-with-addons.min.js" crossorigin></script>
+    <script src="//static.parastorage.com/unpkg/react-dom@15.5.4/dist/react-dom.min.js" crossorigin></script>
+    <script src="//static.parastorage.com/unpkg/i18next@10.6.0/dist/umd/i18next.min.js" crossorigin></script>
+    <script src="//static.parastorage.com/unpkg/moment@2.22.2/min/moment.min.js" crossorigin></script>
+    <script src="//static.parastorage.com/unpkg/inbox-common@2.0.1139/dist/statics/inbox-common.bundle.min.js" crossorigin></script>
+    <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+    <script src="//static.parastorage.com/services/chat-widget/1.451.0/app.bundle.min.js"></script>
+    
+  </body>
+</html>
